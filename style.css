@@ -192,10 +192,11 @@ h4{font-size:15px;line-height:22px;font-weight:600}
 .section__lead{color:var(--secondary);font-size:15px;line-height:24px;margin:0;max-width:680px}
 
 .grid{display:grid;gap:16px}
+.grid--2{grid-template-columns:1fr}
 .grid--3{grid-template-columns:1fr}
 .grid--5{grid-template-columns:repeat(2,1fr)}
 .grid--6{grid-template-columns:repeat(2,1fr)}
-@media (min-width:640px){.grid--6{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:640px){.grid--2{grid-template-columns:repeat(2,1fr);max-width:720px;margin-inline:auto};.grid--6{grid-template-columns:repeat(3,1fr)}}
 @media (min-width:760px){.grid--3{grid-template-columns:repeat(3,1fr)};.grid--5{grid-template-columns:repeat(3,1fr)}}
 @media (min-width:1024px){.grid--5{grid-template-columns:repeat(5,1fr)};.grid--6{grid-template-columns:repeat(6,1fr)}}
 
