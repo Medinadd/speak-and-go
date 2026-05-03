@@ -3,413 +3,437 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-<title>Speak'n Go — заговорить на английском это решение, не способность</title>
+<title>Speak'n Go — онлайн-школа английского</title>
 <meta name="description" content="Speak'n Go — онлайн-школа английского. Базовый, разговорный и персональный курсы. Преподаватели с CELTA, TESOL, IELTS. Группы до 6 человек. Бесплатный пробный урок." />
-<meta name="theme-color" content="#0B0C0E" />
+<meta name="theme-color" content="#1E3A5F" />
 
-<link rel="icon" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%230B0C0E"/><text x="50" y="74" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-weight="700" font-size="74" fill="%23F4F1EA">S</text></svg>' />
+<link rel="icon" type="image/png" href="assets/logo.png" />
+<link rel="apple-touch-icon" href="assets/logo.png" />
 
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Speak'n Go — онлайн-школа английского" />
-<meta property="og:description" content="Заговорить — это решение, не способность. Базовый, разговорный и персональный курсы; группы до 6 человек; преподаватели CELTA / TESOL / IELTS." />
+<meta property="og:description" content="Базовый, разговорный и персональный курсы. Преподаватели с CELTA, TESOL, IELTS. Группы до 6 человек. Бесплатный пробный урок." />
 <meta property="og:url" content="https://speak-and-go-lake.vercel.app/" />
-<meta property="og:image" content="https://speak-and-go-lake.vercel.app/assets/og.png" />
+<meta property="og:image" content="https://speak-and-go-lake.vercel.app/assets/logo.png" />
 <meta name="twitter:card" content="summary_large_image" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <a class="skip" href="#main">К содержанию</a>
 
-<header class="masthead">
-  <div class="row row--top">
-    <div class="row__left">
-      <span class="iso">№ 24 · ВЫПУСК 2026</span>
-    </div>
-    <a class="logo" href="#top" aria-label="Speak'n Go">
-      <span class="logo__mark">S</span><span class="logo__word">peak<i>’</i>n&nbsp;Go</span>
+<header class="topbar">
+  <div class="topbar__row">
+    <a class="brand" href="#top" aria-label="Speak'n Go">
+      <img src="assets/logo.png" alt="" width="40" height="40" />
+      <span class="brand__name">Speak<span>’</span>n Go</span>
+      <span class="brand__sub">онлайн-школа английского</span>
     </a>
-    <div class="row__right">
-      <span class="iso">RU · KZ · ONLINE</span>
+    <nav class="topbar__nav" aria-label="Главное меню">
+      <a href="#courses">Курсы</a>
+      <a href="#pricing">Цены</a>
+      <a href="#results">Результаты</a>
+      <a href="#team">Команда</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <div class="topbar__cta">
+      <a class="btn btn--ghost" href="tel:+77064067605">+7 706 406 7605</a>
+      <a class="btn btn--primary" href="#lead">Записаться</a>
     </div>
+    <button id="burger" class="burger" aria-controls="mobileMenu" aria-expanded="false" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
   </div>
-  <nav class="row row--nav" aria-label="Главное меню">
-    <a href="#thesis">Тезис</a>
-    <a href="#numbers">Цифры</a>
-    <a href="#courses">Курсы</a>
-    <a href="#voices">Голоса</a>
-    <a href="#pricing">Цены</a>
-    <a href="#team">Команда</a>
-    <a href="#faq">Вопросы</a>
-    <a class="nav__cta" href="#lead">Записаться <span aria-hidden="true">↗</span></a>
-    <button id="burger" class="burger" aria-controls="mobileMenu" aria-expanded="false" aria-label="Меню"><span></span><span></span></button>
-  </nav>
-  <div id="mobileMenu" class="mobile" hidden>
-    <a href="#thesis" data-close>Тезис</a>
-    <a href="#numbers" data-close>Цифры</a>
+  <nav id="mobileMenu" class="mobileMenu" hidden aria-label="Мобильное меню">
     <a href="#courses" data-close>Курсы</a>
-    <a href="#voices" data-close>Голоса</a>
     <a href="#pricing" data-close>Цены</a>
+    <a href="#results" data-close>Результаты</a>
     <a href="#team" data-close>Команда</a>
     <a href="#faq" data-close>Вопросы</a>
-    <a class="mobile__cta" href="#lead" data-close>Записаться ↗</a>
+    <a class="btn btn--primary mobileMenu__cta" href="#lead" data-close>Записаться</a>
+  </nav>
+  <div class="topbar__crumb">
+    <span class="kbd">SCH</span>
+    <span>Online School</span>
+    <span class="sep">/</span>
+    <span>Курсы английского</span>
+    <span class="sep">/</span>
+    <span class="muted">Главная</span>
   </div>
 </header>
 
 <main id="main">
 
 <section id="top" class="hero">
-  <div class="hero__deck">
-    <span class="kicker">Онлайн-школа английского с 2017 года</span>
-  </div>
-  <h1 class="hero__h1">
-    Заговорить — это <em>решение</em>,<br/>не способность.
-  </h1>
-  <div class="hero__sub">
-    <p>Мы учим говорить с первого занятия. Базовый, разговорный и персональный курсы; группы до шести человек; преподаватели с&nbsp;сертификатами CELTA, TESOL, IELTS; занятия в&nbsp;Zoom; оплата по&nbsp;месяцу; рассрочка Kaspi.</p>
-    <div class="hero__cta">
-      <a class="btn btn--solid" href="#lead">Бесплатный пробный урок</a>
-      <a class="btn btn--line" href="#pricing">Смотреть цены ↓</a>
+  <div class="hero__grid">
+    <div class="hero__copy">
+      <span class="overline">с 2017 года · Almaty + 7 стран</span>
+      <h1>Курсы английского для тех, кто хочет <em>говорить</em>, а не сдавать тесты.</h1>
+      <p class="lede">
+        Базовый, разговорный и персональный курсы. Группы до 6 человек.
+        Преподаватели с сертификатами CELTA, TESOL, IELTS. Занятия в Zoom,
+        оплата по месяцу, рассрочка Kaspi.
+      </p>
+      <div class="hero__cta">
+        <a class="btn btn--primary btn--lg" href="#lead">Бесплатный пробный урок</a>
+        <a class="btn btn--secondary btn--lg" href="#pricing">Цены и форматы</a>
+      </div>
+      <ul class="hero__meta">
+        <li><b>18 800+</b> студентов</li>
+        <li><b>91 %</b> достигают цели</li>
+        <li><b>15+</b> преподавателей</li>
+        <li><b>3,5 мес.</b> один уровень</li>
+      </ul>
     </div>
-  </div>
-  <div class="hero__rail">
-    <span><b>EST.</b> 2017</span>
-    <span><b>STUDENTS</b> 18 800+</span>
-    <span><b>COUNTRIES</b> 8</span>
-    <span><b>ALMA MATER</b> Bard, AUCA, ЛГУ им.&nbsp;Пушкина, KTL</span>
+
+    <aside class="hero__panel" aria-label="Результаты студентов">
+      <header class="panel__head">
+        <h2>Последние результаты IELTS</h2>
+        <span class="chip chip--ok">Verified</span>
+      </header>
+      <table class="data">
+        <thead>
+          <tr><th>Студент</th><th>Цель</th><th>Балл</th><th>Статус</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Кристина</td>
+            <td>5,5 → Канада</td>
+            <td><b>6.0</b></td>
+            <td><span class="chip chip--ok">Поступила</span></td>
+          </tr>
+          <tr>
+            <td>Жангир</td>
+            <td>6,5</td>
+            <td><b>7.0</b></td>
+            <td><span class="chip chip--ok">Сдан</span></td>
+          </tr>
+          <tr>
+            <td>Юлий</td>
+            <td>5,5</td>
+            <td><b>6.0</b></td>
+            <td><span class="chip chip--ok">Сдан</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <footer class="panel__foot">
+        <a href="#results" class="link">Все результаты и оригиналы переписок →</a>
+      </footer>
+    </aside>
   </div>
 </section>
 
-<section id="thesis" class="thesis">
-  <div class="rule"></div>
-  <div class="thesis__grid">
-    <div class="thesis__label"><span class="iso">I.</span> Тезис</div>
-    <p class="thesis__body">
-      Большинство школ продают английский как <em>знание</em> — будто его нужно накопить, проверить, и только потом разрешить себе говорить. Мы не верим в эту последовательность. Английский — это поведение. Поэтому первое занятие у нас — не тест, а разговор. И каждое следующее тоже.
-    </p>
-    <p class="thesis__sig">— Ольга Ветеорец, основатель школы<br/><span class="iso">Привезла авторский разговорный курс из США, программа Work&nbsp;and&nbsp;Travel, 2017</span></p>
+<section id="courses" class="section">
+  <header class="section__head">
+    <span class="overline">Курсы</span>
+    <h2>Три формата под три типа задач</h2>
+    <p class="section__lead">Учебники и пособия мы выдаём бесплатно. Вы платите только за уроки.</p>
+  </header>
+
+  <div class="grid grid--3">
+    <article class="card">
+      <header class="card__head">
+        <span class="chip chip--filter">Базовый</span>
+        <span class="kbd">01</span>
+      </header>
+      <h3>Полный курс английского</h3>
+      <p>Чтение, письмо, аудирование, говорение и грамматика. Один уровень — 3,5–4 месяца, в конце финальный экзамен и сертификат школы.</p>
+      <dl class="kv">
+        <dt>Формат</dt><dd>Группа до 6 человек</dd>
+        <dt>График</dt><dd>3 × 1,5 часа в неделю</dd>
+        <dt>Длительность</dt><dd>3,5–4 месяца / уровень</dd>
+        <dt>Стоимость</dt><dd>от 23 000 ₸ / мес</dd>
+      </dl>
+      <a class="link" href="#lead">Записаться на пробный →</a>
+    </article>
+
+    <article class="card card--accent">
+      <header class="card__head">
+        <span class="chip chip--filter">Разговорный</span>
+        <span class="kbd">02</span>
+      </header>
+      <h3>80 % урока — практика речи</h3>
+      <p>Speaking, listening, pronunciation. Авторский курс, привезённый основателем из США (Work&nbsp;and&nbsp;Travel, 2017). Подходит тем, у кого «всё знаю, но молчу».</p>
+      <dl class="kv">
+        <dt>Формат</dt><dd>Парный (2 чел.) или группа</dd>
+        <dt>График</dt><dd>3 × 1 час в неделю</dd>
+        <dt>Длительность</dt><dd>от 1 месяца</dd>
+        <dt>Стоимость</dt><dd>от 30 000 ₸ / мес</dd>
+      </dl>
+      <a class="link" href="#lead">Записаться на пробный →</a>
+    </article>
+
+    <article class="card">
+      <header class="card__head">
+        <span class="chip chip--filter">Персональный</span>
+        <span class="kbd">03</span>
+      </header>
+      <h3>Программа под одну цель</h3>
+      <p>Подготовка к IELTS, корпоративное обучение, собеседование на английском, доработка одной слабой темы. Преподаватель и план подбираются под результат.</p>
+      <dl class="kv">
+        <dt>Формат</dt><dd>1 на 1</dd>
+        <dt>График</dt><dd>от 2 уроков в месяц</dd>
+        <dt>Длительность</dt><dd>зависит от цели</dd>
+        <dt>Стоимость</dt><dd>от 42 400 ₸ / мес</dd>
+      </dl>
+      <a class="link" href="#lead">Записаться на пробный →</a>
+    </article>
   </div>
 </section>
 
-<section id="numbers" class="numbers">
-  <div class="rule"></div>
-  <div class="numbers__head">
-    <span class="iso">II. Цифры</span>
-    <h2>Что выглядит впечатляюще на постере и подтверждается у&nbsp;нас в&nbsp;чате.</h2>
+<section id="pricing" class="section section--alt">
+  <header class="section__head">
+    <span class="overline">Цены</span>
+    <h2>Прозрачный прайс, оплата по месяцу</h2>
+    <p class="section__lead">Учебники, пособия и пакет бонусов уже включены. Доступна рассрочка Kaspi.</p>
+  </header>
+
+  <div class="panel">
+    <table class="data data--wide">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Формат</th>
+          <th>Группа</th>
+          <th>График</th>
+          <th>Цена / месяц</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="kbd">A</span></td>
+          <td>Групповые занятия</td>
+          <td>до 6 человек</td>
+          <td>3 × 1,5 ч / нед</td>
+          <td><span class="amt">23 000 ₸</span></td>
+          <td><a class="btn btn--secondary btn--sm" href="#lead">Записаться</a></td>
+        </tr>
+        <tr class="row--selected">
+          <td><span class="kbd">B</span></td>
+          <td>Парные занятия <span class="chip chip--ok chip--sm">популярный</span></td>
+          <td>2 человека</td>
+          <td>3 × 1 ч / нед</td>
+          <td><span class="amt">30 000 ₸</span></td>
+          <td><a class="btn btn--primary btn--sm" href="#lead">Записаться</a></td>
+        </tr>
+        <tr>
+          <td><span class="kbd">C</span></td>
+          <td>Индивидуально</td>
+          <td>1 на 1</td>
+          <td>от 2 уроков по 1 ч</td>
+          <td><span class="amt">от 42 400 ₸</span></td>
+          <td><a class="btn btn--secondary btn--sm" href="#lead">Записаться</a></td>
+        </tr>
+        <tr>
+          <td><span class="kbd">T1</span></td>
+          <td>Пробный — групповой</td>
+          <td>в действующей группе</td>
+          <td>1,5 часа</td>
+          <td><span class="amt">бесплатно</span></td>
+          <td><a class="btn btn--secondary btn--sm" href="#lead">Записаться</a></td>
+        </tr>
+        <tr>
+          <td><span class="kbd">T2</span></td>
+          <td>Пробный — индивидуальный</td>
+          <td>1 на 1</td>
+          <td>1 час</td>
+          <td><span class="amt">2 400 ₸</span></td>
+          <td><a class="btn btn--secondary btn--sm" href="#lead">Записаться</a></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-  <ul class="numbers__grid">
-    <li>
-      <span class="num">18 800<sup>+</sup></span>
-      <span class="cap">студентов в&nbsp;Instagram, реальные люди</span>
-    </li>
-    <li>
-      <span class="num">91<sup>%</sup></span>
-      <span class="cap">достигают своей цели в&nbsp;языке</span>
-    </li>
-    <li>
-      <span class="num">15<sup>+</sup></span>
-      <span class="cap">преподавателей с&nbsp;сертификатами</span>
-    </li>
-    <li>
-      <span class="num">3,5</span>
-      <span class="cap">месяца — один уровень с&nbsp;экзаменом</span>
-    </li>
-    <li>
-      <span class="num">6</span>
-      <span class="cap">человек — максимум в&nbsp;группе</span>
-    </li>
-    <li>
-      <span class="num">8</span>
-      <span class="cap">стран, где живут наши студенты</span>
-    </li>
+
+  <ul class="bullets">
+    <li>Учебники и пособия — бесплатно, в электронном формате.</li>
+    <li>Бонус-пакет от школы (тренажёры, словари, видеоуроки).</li>
+    <li>Рассрочка Kaspi · оплата по месяцу, без долгого договора.</li>
+    <li>Перед записью — бесплатная консультация менеджера.</li>
   </ul>
-  <p class="strip">🇰🇿 Казахстан · 🇷🇺 Россия · 🇺🇸 США · 🇨🇦 Канада · 🇦🇺 Австралия · 🇰🇷 Южная Корея · 🇰🇬 Кыргызстан · 🇺🇿 Узбекистан</p>
 </section>
 
-<section id="courses" class="courses">
-  <div class="rule"></div>
-  <header class="courses__head">
-    <span class="iso">III. Курсы</span>
-    <h2>Три способа подойти к&nbsp;языку. Выбираете один — или начинаем с&nbsp;того, что подходит сейчас, и&nbsp;двигаемся.</h2>
+<section id="results" class="section">
+  <header class="section__head">
+    <span class="overline">Результаты</span>
+    <h2>Реальные сообщения студентов, не транскрипции</h2>
+    <p class="section__lead">Ниже — оригиналы скриншотов из чатов. По клику открываются в полный размер.</p>
   </header>
 
-  <article class="chapter">
-    <span class="chapter__num">01</span>
-    <div class="chapter__body">
-      <h3>Базовый курс</h3>
-      <p class="chapter__lead">Полный английский: чтение, письмо, аудирование, грамматика. Один уровень — 3,5–4&nbsp;месяца, в&nbsp;конце финальный экзамен и&nbsp;сертификат.</p>
-      <ul class="chapter__bullets">
-        <li>Группа до&nbsp;6&nbsp;человек, 3 раза в&nbsp;неделю по&nbsp;1,5&nbsp;часа</li>
-        <li>Учебники, пособия и&nbsp;бонус-пакет — бесплатно</li>
-        <li>70&nbsp;%+ на&nbsp;экзамене — переход на&nbsp;следующий уровень</li>
-      </ul>
-    </div>
-  </article>
-
-  <article class="chapter">
-    <span class="chapter__num">02</span>
-    <div class="chapter__body">
-      <h3>Разговорный</h3>
-      <p class="chapter__lead">80&nbsp;%&nbsp;урока — speaking, listening, pronunciation. Авторский курс школы. Меньше «что такое Past Perfect», больше «как сказать то, что хочется, прямо сейчас».</p>
-      <ul class="chapter__bullets">
-        <li>Подходит тем, у&nbsp;кого «всё знаю, но&nbsp;молчу»</li>
-        <li>Парный (2 человека) или групповой формат</li>
-        <li>Преподаватели с&nbsp;опытом США (Work&nbsp;and&nbsp;Travel, FLEX, AUCA, Bard)</li>
-      </ul>
-    </div>
-  </article>
-
-  <article class="chapter">
-    <span class="chapter__num">03</span>
-    <div class="chapter__body">
-      <h3>Персональный</h3>
-      <p class="chapter__lead">Программа собирается под конкретный запрос: подготовка к&nbsp;IELTS, корпоративное обучение, собеседование на&nbsp;английском, доработка одной слабой темы.</p>
-      <ul class="chapter__bullets">
-        <li>1&nbsp;на&nbsp;1, от&nbsp;2 уроков в&nbsp;месяц</li>
-        <li>Преподаватель и&nbsp;план подбираются под цель</li>
-        <li>Студенты сдают IELTS на&nbsp;6.0–7.0+ (см. голоса ниже)</li>
-      </ul>
-    </div>
-  </article>
-</section>
-
-<section id="voices" class="voices">
-  <div class="rule"></div>
-  <header class="voices__head">
-    <span class="iso">IV. Голоса</span>
-    <h2>Реальные сообщения, не&nbsp;транскрипции. Никто из&nbsp;нас не&nbsp;умеет так художественно благодарить — это пишут сами студенты.</h2>
-  </header>
-
-  <figure class="quote quote--lead">
-    <blockquote>«Сдала IELTS на&nbsp;6.0. Прошла уровень <em>upper-intermediate</em>. Спасибо вашей школе — рекомендую».</blockquote>
-    <figcaption>
-      <span class="iso">Кристина · IELTS 6.0 · поступила в&nbsp;Канаду</span>
-      <a class="proof" href="assets/results/kristina-ielts-6.png" target="_blank" rel="noopener">оригинал →</a>
-    </figcaption>
-  </figure>
-
-  <div class="voices__pair">
-    <figure class="quote">
-      <blockquote>«Сдал IELTS на&nbsp;7.0. Срок был ограничен — было трудно поверить, что я&nbsp;смогу набрать такой балл».</blockquote>
-      <figcaption>
-        <span class="iso">Жангир · IELTS 7.0 · ежедневные занятия</span>
-        <a class="proof" href="assets/results/zhangir-ielts-7.png" target="_blank" rel="noopener">оригинал →</a>
-      </figcaption>
-    </figure>
-    <figure class="quote">
-      <blockquote>«Цель была минимум 5,5 — школа помогла набрать 6.0. Хочу поблагодарить за&nbsp;поддержку на&nbsp;всём пути».</blockquote>
-      <figcaption>
-        <span class="iso">Юлий · IELTS 6.0 · цель была 5,5</span>
-        <a class="proof" href="assets/results/yuliy-ielts-6.png" target="_blank" rel="noopener">оригинал →</a>
-      </figcaption>
-    </figure>
+  <div class="grid grid--3">
+    <a class="result" href="assets/results/kristina-ielts-6.png" target="_blank" rel="noopener">
+      <img src="assets/results/kristina-ielts-6.png" alt="Кристина — IELTS 6.0, поступила в Канаду" loading="lazy" />
+      <div class="result__body">
+        <span class="chip chip--ok">IELTS 6.0</span>
+        <p><b>Кристина</b> · цель 5,5 → 6.0 · поступила в Канаду 🇨🇦</p>
+      </div>
+    </a>
+    <a class="result" href="assets/results/zhangir-ielts-7.png" target="_blank" rel="noopener">
+      <img src="assets/results/zhangir-ielts-7.png" alt="Жангир — IELTS 7.0 после ежедневных занятий" loading="lazy" />
+      <div class="result__body">
+        <span class="chip chip--ok">IELTS 7.0</span>
+        <p><b>Жангир</b> · ежедневные занятия · персональная программа</p>
+      </div>
+    </a>
+    <a class="result" href="assets/results/yuliy-ielts-6.png" target="_blank" rel="noopener">
+      <img src="assets/results/yuliy-ielts-6.png" alt="Юлий — IELTS 6.0 при цели 5.5" loading="lazy" />
+      <div class="result__body">
+        <span class="chip chip--ok">IELTS 6.0</span>
+        <p><b>Юлий</b> · цель 5,5 → 6.0 · подготовка с куратором</p>
+      </div>
+    </a>
   </div>
 
-  <h3 class="voices__sub">Из&nbsp;чата школы</h3>
-  <div class="voices__contact">
-    <figure class="contact"><img src="assets/reviews/wa-1.png" alt="Сообщения студентов в чате Speak'n Go" loading="lazy" /></figure>
-    <figure class="contact"><img src="assets/reviews/wa-2.png" alt="Сообщения студентов в чате Speak'n Go" loading="lazy" /></figure>
-    <figure class="contact"><img src="assets/reviews/wa-3.png" alt="Сообщения студентов в чате Speak'n Go" loading="lazy" /></figure>
-    <figure class="contact"><img src="assets/reviews/wa-4.png" alt="Сообщения студентов в чате Speak'n Go" loading="lazy" /></figure>
-    <figure class="contact"><img src="assets/reviews/wa-5.png" alt="Сообщения студентов в чате Speak'n Go" loading="lazy" /></figure>
-    <figure class="contact"><img src="assets/reviews/polina.png" alt="Отзыв студентки Полины — преподаватель Дарья" loading="lazy" /></figure>
+  <h3 class="results__sub">Из переписок в WhatsApp</h3>
+  <div class="grid grid--6">
+    <figure class="thumb"><img src="assets/reviews/wa-1.png" alt="Сообщение студента Speak'n Go" loading="lazy" /></figure>
+    <figure class="thumb"><img src="assets/reviews/wa-2.png" alt="Сообщение студента Speak'n Go" loading="lazy" /></figure>
+    <figure class="thumb"><img src="assets/reviews/wa-3.png" alt="Сообщение студента Speak'n Go" loading="lazy" /></figure>
+    <figure class="thumb"><img src="assets/reviews/wa-4.png" alt="Сообщение студента Speak'n Go" loading="lazy" /></figure>
+    <figure class="thumb"><img src="assets/reviews/wa-5.png" alt="Сообщение студента Speak'n Go" loading="lazy" /></figure>
+    <figure class="thumb"><img src="assets/reviews/polina.png" alt="Отзыв Полины — преподаватель Дарья" loading="lazy" /></figure>
   </div>
 </section>
 
-<section id="pricing" class="pricing">
-  <div class="rule"></div>
-  <header class="pricing__head">
-    <span class="iso">V. Цены</span>
-    <h2>Без вступительных взносов и&nbsp;контрактов на&nbsp;год. Учебники включены. Рассрочка Kaspi.</h2>
+<section id="team" class="section section--alt">
+  <header class="section__head">
+    <span class="overline">Команда</span>
+    <h2>15+ преподавателей с сертификатами</h2>
+    <p class="section__lead">Старший методист контролирует работу каждого преподавателя — поэтому результат стабилен.</p>
   </header>
-  <table class="dossier">
-    <thead>
-      <tr>
-        <th></th>
-        <th><span class="iso">Формат</span></th>
-        <th><span class="iso">График</span></th>
-        <th><span class="iso">В&nbsp;месяц</span></th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="ix">a</span></td>
-        <td>Группа <em>до 6 человек</em></td>
-        <td>3 × 1,5&nbsp;часа в&nbsp;неделю</td>
-        <td><span class="amt">23 000 ₸</span></td>
-        <td><a class="btn btn--mini" href="#lead">Записаться ↗</a></td>
-      </tr>
-      <tr class="pop">
-        <td><span class="ix">b</span></td>
-        <td>Парный формат <em>2 человека</em> · <span class="ribbon">популярный</span></td>
-        <td>3 × 1&nbsp;час в&nbsp;неделю</td>
-        <td><span class="amt">30 000 ₸</span></td>
-        <td><a class="btn btn--mini" href="#lead">Записаться ↗</a></td>
-      </tr>
-      <tr>
-        <td><span class="ix">c</span></td>
-        <td>Индивидуально <em>1 на&nbsp;1</em></td>
-        <td>от 2 уроков по&nbsp;1&nbsp;часу</td>
-        <td><span class="amt">от 42 400 ₸</span></td>
-        <td><a class="btn btn--mini" href="#lead">Записаться ↗</a></td>
-      </tr>
-    </tbody>
-  </table>
-  <p class="pricing__note"><b>Пробный урок:</b> бесплатно (1,5&nbsp;часа в&nbsp;действующей группе вашего уровня) — или индивидуально 1&nbsp;час за&nbsp;2 400 ₸.</p>
-</section>
 
-<section id="team" class="team">
-  <div class="rule"></div>
-  <header class="team__head">
-    <span class="iso">VI. Команда</span>
-    <h2>Пятнадцать человек, которые ведут уроки и&nbsp;один методист, который проверяет, как ведут уроки остальные четырнадцать.</h2>
-  </header>
-  <div class="team__grid">
+  <div class="grid grid--5">
 
-    <figure class="port">
+    <article class="person">
       <img src="assets/teachers/olga.png" alt="Ольга Ветеорец" loading="lazy" />
-      <figcaption>
-        <h4>Ольга Ветеорец</h4>
-        <p class="role"><em>Основатель</em></p>
-        <p>Привезла авторский разговорный курс из&nbsp;США (Work&nbsp;and&nbsp;Travel, 2017). Создатель учебников и&nbsp;программ школы.</p>
-      </figcaption>
-    </figure>
+      <h4>Ольга Ветеорец</h4>
+      <p class="person__role">Основатель</p>
+      <p class="person__bio">Авторский разговорный курс из США (Work&nbsp;and&nbsp;Travel, 2017). Создатель программ и учебников школы.</p>
+    </article>
 
-    <figure class="port">
+    <article class="person">
       <img src="assets/teachers/alexandr.png" alt="Александр Апполонов" loading="lazy" />
-      <figcaption>
-        <h4>Александр Апполонов</h4>
-        <p class="role"><em>Старший преподаватель · методист</em></p>
-        <p>Контролирует работу всех преподавателей. Колледж, университет и&nbsp;магистратура по&nbsp;преподаванию английского. 5&nbsp;лет.</p>
-      </figcaption>
-    </figure>
+      <h4>Александр Апполонов</h4>
+      <p class="person__role">Старший преподаватель · методист</p>
+      <p class="person__bio">Контролирует работу всех преподавателей. Колледж + университет + магистратура. 5 лет опыта.</p>
+    </article>
 
-    <figure class="port">
+    <article class="person">
       <img src="assets/teachers/darya.png" alt="Дарья Апполонова" loading="lazy" />
-      <figcaption>
-        <h4>Дарья Апполонова</h4>
-        <p class="role"><em>Старший преподаватель</em></p>
-        <p>Университет по&nbsp;специальности «преподаватель английского». 4&nbsp;года. Ведёт IELTS-подготовку.</p>
-      </figcaption>
-    </figure>
+      <h4>Дарья Апполонова</h4>
+      <p class="person__role">Старший преподаватель</p>
+      <p class="person__bio">Университет, специальность «преподаватель английского». 4 года. Ведёт IELTS-подготовку.</p>
+    </article>
 
-    <figure class="port">
+    <article class="person">
       <img src="assets/teachers/elena.png" alt="Елена Харченко" loading="lazy" />
-      <figcaption>
-        <h4>Елена Харченко</h4>
-        <p class="role"><em>Старший преподаватель</em></p>
-        <p>Английский и&nbsp;немецкий. 5&nbsp;лет. Организатор speaking-клубов, квизов, мастер-классов.</p>
-      </figcaption>
-    </figure>
+      <h4>Елена Харченко</h4>
+      <p class="person__role">Старший преподаватель</p>
+      <p class="person__bio">Английский + немецкий. 5 лет. Speaking-клубы, мастер-классы, методика.</p>
+    </article>
 
-    <figure class="port">
+    <article class="person">
       <img src="assets/teachers/anastasia.png" alt="Анастасия Кириллова" loading="lazy" />
-      <figcaption>
-        <h4>Анастасия Кириллова</h4>
-        <p class="role"><em>Преподаватель</em></p>
-        <p>Английский и&nbsp;немецкий. Более 4&nbsp;лет в&nbsp;образовательной сфере.</p>
-      </figcaption>
-    </figure>
+      <h4>Анастасия Кириллова</h4>
+      <p class="person__role">Преподаватель</p>
+      <p class="person__bio">Английский + немецкий. Более 4 лет в образовательной сфере.</p>
+    </article>
 
-    <figure class="port">
+    <article class="person">
       <img src="assets/teachers/elfida.png" alt="Эльфида Мазманова" loading="lazy" />
-      <figcaption>
-        <h4>Эльфида Мазманова</h4>
-        <p class="role"><em>Преподаватель · TESOL</em></p>
-        <p>American University of Central Asia + магистратура Bard College, Нью-Йорк (Master of Arts in Teaching).</p>
-      </figcaption>
-    </figure>
+      <h4>Эльфида Мазманова</h4>
+      <p class="person__role">Преподаватель · TESOL</p>
+      <p class="person__bio">AUCA + магистратура Bard College, Нью-Йорк (Master of Arts in Teaching). Сертификат TESOL.</p>
+    </article>
 
-    <figure class="port">
+    <article class="person">
       <img src="assets/teachers/aruzhan.png" alt="Аружан Сейдікәрімова" loading="lazy" />
-      <figcaption>
-        <h4>Аружан Сейдікәрімова</h4>
-        <p class="role"><em>Преподаватель · қазақша / русский</em></p>
-        <p>Бакалавр переводческого дела, Университет имени Сулеймана Демиреля. Сдавала IELTS. 4+ года.</p>
-      </figcaption>
-    </figure>
+      <h4>Аружан Сейдікәрімова</h4>
+      <p class="person__role">Преподаватель · қазақша / русский</p>
+      <p class="person__bio">Бакалавр переводческого дела (Университет им. Сулеймана Демиреля). 4+ года. Сдавала IELTS.</p>
+    </article>
 
-    <figure class="port">
+    <article class="person">
       <img src="assets/teachers/aleksandra.png" alt="Александра Щебентовская" loading="lazy" />
-      <figcaption>
-        <h4>Александра Щебентовская</h4>
-        <p class="role"><em>Преподаватель</em></p>
-        <p>ЛГУ им.&nbsp;Пушкина, Санкт-Петербург (педагогика английского и&nbsp;немецкого). FLEX, стажировка в&nbsp;Girne American University. 6&nbsp;лет.</p>
-      </figcaption>
-    </figure>
+      <h4>Александра Щебентовская</h4>
+      <p class="person__role">Преподаватель</p>
+      <p class="person__bio">ЛГУ им. Пушкина (педагогика английского + немецкого). FLEX, Girne American University. 6 лет.</p>
+    </article>
 
-    <figure class="port">
+    <article class="person">
       <img src="assets/teachers/anna.png" alt="Анна Коротя" loading="lazy" />
-      <figcaption>
-        <h4>Анна Коротя</h4>
-        <p class="role"><em>Преподаватель</em></p>
-        <p>Магистр переводческого дела. 10&nbsp;лет в&nbsp;преподавании. Work&nbsp;&amp;&nbsp;Travel США (2013), сдавала IELTS (2015).</p>
-      </figcaption>
-    </figure>
+      <h4>Анна Коротя</h4>
+      <p class="person__role">Преподаватель</p>
+      <p class="person__bio">Магистр переводческого дела. 10 лет в преподавании. Work&nbsp;&amp;&nbsp;Travel США (2013), IELTS (2015).</p>
+    </article>
 
-    <figure class="port">
+    <article class="person">
       <img src="assets/teachers/adil.png" alt="Адиль Рахимбеков" loading="lazy" />
-      <figcaption>
-        <h4>Адиль Рахимбеков</h4>
-        <p class="role"><em>Преподаватель · IELTS 7.5</em></p>
-        <p>KTL, Astana → University of Business, Прага. 2+ года в&nbsp;образовательной сфере.</p>
-      </figcaption>
-    </figure>
+      <h4>Адиль Рахимбеков</h4>
+      <p class="person__role">Преподаватель · IELTS 7.5</p>
+      <p class="person__bio">KTL, Astana → University of Business, Прага. 2+ года в образовательной сфере.</p>
+    </article>
 
   </div>
-  <p class="team__note iso">…и&nbsp;ещё пятеро в&nbsp;команде. Знакомим с&nbsp;конкретным учителем перед стартом.</p>
+  <p class="muted small center">…и ещё пятеро в команде. Знакомим с конкретным учителем перед стартом.</p>
 </section>
 
-<section id="faq" class="faq">
-  <div class="rule"></div>
-  <header class="faq__head">
-    <span class="iso">VII. Вопросы</span>
-    <h2>Если что-то непонятно — нажмите.</h2>
+<section id="faq" class="section">
+  <header class="section__head">
+    <span class="overline">Вопросы</span>
+    <h2>Частые вопросы</h2>
   </header>
   <div class="qa">
     <details>
-      <summary><span>01</span> Сколько длится один уровень?</summary>
-      <p>В&nbsp;среднем 3,5–4&nbsp;месяца. Зависит от&nbsp;количества занятий в&nbsp;неделю. В&nbsp;конце уровня — финальный экзамен; чтобы перейти дальше, нужно набрать 70&nbsp;%+. После сдачи студент получает сертификат об&nbsp;окончании уровня.</p>
+      <summary><span class="kbd">01</span> Сколько длится один уровень?</summary>
+      <p>В среднем 3,5–4 месяца. Зависит от количества занятий в неделю. В конце уровня — финальный экзамен; чтобы перейти дальше, нужно набрать 70 %+. После сдачи студент получает сертификат об окончании уровня.</p>
     </details>
     <details>
-      <summary><span>02</span> Где проходят занятия?</summary>
-      <p>Онлайн, на&nbsp;платформе Zoom или Google Meet. Преподаватель видит вас, вы&nbsp;видите его и&nbsp;материалы. Все занятия записываются и&nbsp;остаются у&nbsp;вас.</p>
+      <summary><span class="kbd">02</span> Где проходят занятия?</summary>
+      <p>Онлайн, на платформе Zoom или Google Meet. Преподаватель видит вас, вы видите его и материалы. Все занятия записываются и остаются у вас.</p>
     </details>
     <details>
-      <summary><span>03</span> Нужно ли покупать учебники?</summary>
-      <p>Нет. Все учебные материалы мы&nbsp;выдаём бесплатно в&nbsp;электронном формате — плюс пакет бонусов от&nbsp;школы.</p>
+      <summary><span class="kbd">03</span> Нужно ли покупать учебники?</summary>
+      <p>Нет. Все учебные материалы мы выдаём бесплатно в электронном формате — плюс пакет бонусов от школы.</p>
     </details>
     <details>
-      <summary><span>04</span> Есть ли пробный урок?</summary>
-      <p>Да, два варианта: бесплатно — в&nbsp;действующей группе вашего уровня (1,5&nbsp;часа); индивидуально — 2 400&nbsp;₸ за&nbsp;1&nbsp;час, изучаете первую тему вашего курса. Перед уроком менеджер бесплатно подбирает группу.</p>
+      <summary><span class="kbd">04</span> Есть ли пробный урок?</summary>
+      <p>Да, два варианта. Бесплатно — в действующей группе вашего уровня (1,5 часа). Индивидуально — 2 400 ₸ за 1 час, изучаете первую тему вашего курса. Перед уроком менеджер бесплатно подбирает группу.</p>
     </details>
     <details>
-      <summary><span>05</span> Как понять свой уровень?</summary>
-      <p>Перед записью наш менеджер проводит бесплатную консультацию: выявляет цели, желания и&nbsp;текущий уровень — после этого предлагает формат и&nbsp;программу.</p>
+      <summary><span class="kbd">05</span> Как понять свой уровень?</summary>
+      <p>Перед записью наш менеджер проводит бесплатную консультацию: выявляет цели, желания и текущий уровень — после этого предлагает формат и программу.</p>
     </details>
     <details>
-      <summary><span>06</span> Можно ли в&nbsp;рассрочку?</summary>
+      <summary><span class="kbd">06</span> Можно ли в рассрочку?</summary>
       <p>Да, доступна рассрочка Kaspi. Также можно платить помесячно — без долгого договора.</p>
     </details>
     <details>
-      <summary><span>07</span> На каких языках вы&nbsp;преподаёте?</summary>
-      <p>Объясняем на&nbsp;русском и&nbsp;казахском. Есть преподаватели, которые ведут уроки полностью на&nbsp;казахском.</p>
+      <summary><span class="kbd">07</span> На каких языках вы преподаёте?</summary>
+      <p>Объясняем на русском и казахском. Есть преподаватели, которые ведут уроки полностью на казахском.</p>
     </details>
   </div>
 </section>
 
-<section id="lead" class="lead">
-  <div class="lead__inner">
-    <span class="iso iso--invert">VIII. Запись</span>
-    <h2 class="lead__h">Заговорить — это <em>решение</em>.<br/>Оставьте номер, и&nbsp;мы&nbsp;поможем его принять.</h2>
+<section id="lead" class="section lead">
+  <div class="lead__grid">
+    <div class="lead__copy">
+      <span class="overline overline--invert">Запись на пробный урок</span>
+      <h2>Оставьте номер — менеджер свяжется в течение дня</h2>
+      <p>Подберём преподавателя и формат под вашу цель. Без обязательств. Учебники и материалы — бесплатно.</p>
+      <ul class="bullets bullets--invert">
+        <li>Бесплатный пробный урок · 1,5 часа</li>
+        <li>Рассрочка Kaspi · оплата по месяцу</li>
+        <li>Менеджер ответит в WhatsApp</li>
+      </ul>
+    </div>
     <form class="lead__form" id="leadForm" onsubmit="return submitLead(event)" novalidate>
       <label>Имя
-        <input type="text" name="name" required autocomplete="name" placeholder="Как к&nbsp;вам обращаться" />
+        <input type="text" name="name" required autocomplete="name" placeholder="Как к вам обращаться" />
       </label>
       <label>Телефон / WhatsApp
         <input type="tel" name="phone" required autocomplete="tel" placeholder="+7 ___ ___ __ __" />
@@ -423,8 +447,8 @@
           <option value="other">Подскажите</option>
         </select>
       </label>
-      <button class="btn btn--invert" type="submit">Записаться на&nbsp;бесплатный урок ↗</button>
-      <p class="form__note">Менеджер свяжется в&nbsp;WhatsApp в&nbsp;течение дня. Без обязательств.</p>
+      <button class="btn btn--primary btn--lg" type="submit">Записаться на пробный урок</button>
+      <p class="form__note">Нажимая «Записаться», вы соглашаетесь, что менеджер Speak<span>’</span>n Go свяжется с вами по WhatsApp.</p>
     </form>
   </div>
 </section>
@@ -432,39 +456,44 @@
 </main>
 
 <footer class="footer">
-  <div class="row row--top">
-    <a class="logo logo--foot" href="#top" aria-label="Speak'n Go">
-      <span class="logo__mark">S</span><span class="logo__word">peak<i>’</i>n&nbsp;Go</span>
+  <div class="footer__row">
+    <a class="brand brand--foot" href="#top" aria-label="Speak'n Go">
+      <img src="assets/logo.png" alt="" width="32" height="32" />
+      <span class="brand__name">Speak<span>’</span>n Go</span>
     </a>
-    <span class="iso">© <span id="year"></span> · ОНЛАЙН-ШКОЛА АНГЛИЙСКОГО · С&nbsp;2017</span>
+    <nav class="footer__nav" aria-label="Подвал">
+      <a href="#courses">Курсы</a>
+      <a href="#pricing">Цены</a>
+      <a href="#results">Результаты</a>
+      <a href="#team">Команда</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <div class="footer__contacts">
+      <a href="https://instagram.com/speakngo.online" target="_blank" rel="noopener">Instagram</a>
+      <a href="#lead">WhatsApp</a>
+    </div>
   </div>
-  <nav class="footer__nav" aria-label="Подвал">
-    <a href="#thesis">Тезис</a>
-    <a href="#numbers">Цифры</a>
-    <a href="#courses">Курсы</a>
-    <a href="#voices">Голоса</a>
-    <a href="#pricing">Цены</a>
-    <a href="#team">Команда</a>
-    <a href="#faq">Вопросы</a>
-    <a href="https://instagram.com/speakngo.online" target="_blank" rel="noopener">Instagram ↗</a>
-    <a href="#lead">WhatsApp ↗</a>
-  </nav>
-  <p class="colophon iso">Набрано в&nbsp;Fraunces и&nbsp;Inter. Цвета: чернила, кремовая бумага, ультрамарин. Сделано вручную, без конструкторов.</p>
+  <div class="footer__legal">
+    <span>© <span id="year"></span> Speak<span>’</span>n Go · онлайн-школа английского с 2017 года</span>
+    <span class="muted">Сделано вручную</span>
+  </div>
 </footer>
 
 <button class="wa-float" id="chatToggle" aria-controls="chat" aria-expanded="false" aria-label="Открыть чат">
-  <span aria-hidden="true">?</span>
+  <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2Zm5 13.6c-.2.6-1.2 1.2-1.7 1.3-.5.1-1.1.1-1.7-.1-.4-.1-1-.3-1.6-.6a13 13 0 0 1-5.1-4.5 5.7 5.7 0 0 1-1.2-3c0-.6.2-1.2.6-1.6.4-.4.8-.5 1-.5h.7c.2 0 .5-.1.8.6l1.1 2.6c.1.2.1.4 0 .6l-.4.6-.5.6c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.4 1.5 2.7 1.7.3.1.5.1.7-.1l.8-.9c.2-.3.5-.2.7-.1l2.3 1.1c.3.1.5.2.6.4.1.2.1.5-.1 1.1Z"/></svg>
 </button>
 <div class="wa-greeting" id="chatGreeting">Здравствуйте. Чем помочь?</div>
 
 <aside class="chat" id="chat" hidden aria-label="Чат школы">
   <header class="chat__head">
-    <strong>Speak<i>’</i>n Go</strong>
-    <small>онлайн · ответим за&nbsp;5&nbsp;минут</small>
+    <div>
+      <strong>Speak<span>’</span>n Go</strong>
+      <small><span class="dot"></span> онлайн · ответим за 5 минут</small>
+    </div>
     <button id="chatClose" aria-label="Закрыть">×</button>
   </header>
   <div class="chat__body" id="chatBody">
-    <div class="chat__msg chat__msg--in">Здравствуйте. Я&nbsp;менеджер школы. Что вас интересует?</div>
+    <div class="chat__msg chat__msg--in">Здравствуйте. Я менеджер Speak<span>’</span>n Go. Что вас интересует?</div>
   </div>
   <div class="chat__quick">
     <button data-q="trial">Пробный урок</button>
@@ -474,7 +503,7 @@
     <button data-q="kids">Можно ли ребёнку</button>
     <button data-q="kaspi">Рассрочка</button>
   </div>
-  <a class="btn btn--invert btn--block chat__cta" href="#lead" data-close-chat>Оставить заявку ↗</a>
+  <a class="btn btn--primary btn--block chat__cta" href="#lead" data-close-chat>Оставить заявку</a>
 </aside>
 
 <script src="script.js"></script>
