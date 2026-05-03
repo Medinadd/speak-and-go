@@ -352,3 +352,51 @@ h4{font-size:15px;line-height:22px;font-weight:600}
   .wa-greeting{display:none}
   .chat{right:12px;left:12px;width:auto;bottom:80px}
 }
+
+/* ====================== MULTI-PAGE EXTRAS ====================== */
+
+/* Active nav link */
+.topbar__nav a.is-active{color:var(--primary);border-bottom-color:var(--primary)}
+.mobileMenu a.is-active{color:var(--primary);background:var(--rail)}
+
+/* Breadcrumb link */
+.topbar__crumb a{color:var(--secondary);transition:color .12s}
+.topbar__crumb a:hover{color:var(--primary)}
+
+/* "See all" link under preview sections */
+.more{margin:24px 0 0}
+.more .link{font-size:14px;font-weight:500}
+
+/* Preview team grid (4 across at desktop) */
+.grid--4{grid-template-columns:repeat(2,1fr)}
+@media (min-width:760px){.grid--4{grid-template-columns:repeat(4,1fr)}}
+
+/* Page hero (subpages) */
+.page-hero{
+  background:var(--surface);border-bottom:1px solid var(--border);
+  padding:48px var(--pad) 36px;
+}
+.page-hero__inner{max-width:var(--max);margin:0 auto}
+.page-hero h1{margin:8px 0 14px;font-size:clamp(26px,3.4vw,38px);line-height:1.16}
+.page-hero .lede{margin:0;max-width:720px}
+
+/* Course rows on courses.html */
+.course-row{
+  max-width:var(--max);margin:0 auto;
+  display:grid;grid-template-columns:1fr;gap:18px;
+}
+@media (min-width:880px){
+  .course-row{grid-template-columns:160px 1fr;gap:36px;align-items:start}
+}
+.course-row__meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.course-row__body h2{font-size:clamp(22px,2.6vw,28px);line-height:1.22;margin:0 0 10px}
+.course-row__body .section__lead{margin-bottom:18px}
+.course-row__body .btn{margin-top:18px}
+
+/* Wider key-value list for detail pages */
+.kv--wide{grid-template-columns:140px 1fr;gap:10px 18px;font-size:14px;padding:18px 0}
+@media (min-width:560px){.kv--wide{grid-template-columns:180px 1fr}}
+
+/* Single-column bullets */
+.bullets--col{grid-template-columns:1fr;max-width:680px}
+@media (min-width:760px){.bullets--col{grid-template-columns:1fr}}
