@@ -240,6 +240,13 @@ h4{font-size:15px;line-height:22px;font-weight:600}
 
 .results__sub{margin:48px 0 18px;font-family:var(--serif);font-weight:600;font-size:20px;line-height:28px;color:var(--ink)}
 .thumb{margin:0;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+.carousel{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:4px 4px 18px;-webkit-overflow-scrolling:touch}
+.carousel::-webkit-scrollbar{height:6px}
+.carousel::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+.carousel > .thumb{flex:0 0 auto;width:260px;scroll-snap-align:start;box-shadow:var(--shadow-1)}
+.carousel > .thumb img{display:block;width:100%;height:auto}
+@media (min-width:640px){.carousel > .thumb{width:300px}}
+@media (min-width:1024px){.carousel > .thumb{width:340px}}
 
 /* ====================== TEAM ====================== */
 .person{
